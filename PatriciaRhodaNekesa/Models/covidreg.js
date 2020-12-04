@@ -15,7 +15,7 @@ const regschema = new mongoose.Schema({
       type: String,
     },
     occupation:{
-      type: Number,
+      type: String,
     },
     nationality:{
       type: String,

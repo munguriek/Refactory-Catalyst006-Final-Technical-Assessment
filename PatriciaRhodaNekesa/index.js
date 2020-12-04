@@ -10,12 +10,12 @@ const app = express();
 // Import routes
 const testroute = require('./routes/covidregroute')
 
-
 //  DB Connection
 mongoose.connect(process.env.DATABASE, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
+  useFindAndModify: false,
 });
 
 mongoose.connection
@@ -26,15 +26,14 @@ mongoose.connection
     console.log(`Connection error: ${err.message}`);
   });
 
-
+  
 
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use(bodyParser.urlencoded({extended: true}))
 
-app.use('/', testroute);
+app.use('/', testroute)
 
 
 
