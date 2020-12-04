@@ -31,11 +31,13 @@ body{
 }
 .header h1{
     margin-left: 150px;
+    padding: 0;
 
 }
 
 .header h3{
     margin-left: 270px;
+    padding: 0;
 
 }
 
@@ -88,17 +90,25 @@ body{
      left: 0; 
 }
 
-.form button{
+.success{
     background-color: green;
     border: 2px solid green;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.form button{
+    background-color: blue;
+    border: 2px solid blue;
     border-radius: 4px;
     color: #fff;
     display: block;
     padding: 8px;
     font-size: 16px;
     font-family: inherit;
-    width: 100%;
+    width: 40%;
     cursor: pointer;
+    float: right;
 }
 
 .form-control.success input{

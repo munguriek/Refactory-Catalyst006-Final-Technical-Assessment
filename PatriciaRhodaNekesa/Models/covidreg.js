@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose');
 
-const covidtestregschema = new mongoose.Schema({
+const regschema = new mongoose.Schema({
     surname: {
       type:String,
     },
@@ -31,4 +31,4 @@ const covidtestregschema = new mongoose.Schema({
 });
 
 
-  module.exports = mongoose.model('covidtest', covidtestregschema);
+  module.exports = mongoose.model('covidtest',regschema);
