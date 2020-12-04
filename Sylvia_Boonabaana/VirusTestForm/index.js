@@ -46,9 +46,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Using the routes for different users from routes directory
 app.use('/', regRoutes)
 
-//This gets the error page when an incorrect path is requested
-// app.get('*', (req, res) => {
-//     res.render('errorPage');
-//   }); 
 
 app.listen(3000);

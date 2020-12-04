@@ -6,7 +6,7 @@ router.get("/patientRegForm", (req, res) => {
   res.render("patientRegForm");
 });
 
-//SAVING CLIENT INFORMATION TO THE DATABASE
+//SAVING PATIENT INFORMATION TO THE DATABASE
 router.post("/patientRegForm", async (req, res) => {
 
   try {
