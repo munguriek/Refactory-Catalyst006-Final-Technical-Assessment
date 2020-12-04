@@ -8,14 +8,22 @@ const register=require("../models/register");
 const Reg = mongoose.model("register");
 
 
-router.get("/",(req,res)=>{
+router.get("/register",(req,res)=>{
 
     res.render("register");
     console.log("Hello welcome my assesment project");
 })
-router.post("/",async(req,res)=>{
-    const items=await Reg.save()
-    res.redirect("back",{register:items})
+router.post("/register",async(req,res)=>{
+    try{
+   
+    const items = new Reg(req.body);
+    console.log(req.body);
+    await items.save();
+
+    }catch(err){
+        res.status(404).send('Sorry! Something went wrong.')
+        console.log(err)
+    }
 })
 
 module.exports = router;
