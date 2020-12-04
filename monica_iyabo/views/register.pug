@@ -12,8 +12,8 @@ html(lang="en")
         .col
           div
             header
-              img(src="../public/images/form-header-image.png" alt="")
-          form( name="register" action="/" method="POST")
+              img(src="/images/form-header-image.png" alt="")
+          form( name="register" action="/" method="POST" onsubmit="return registerValid()")
             .form-row
               .col
                 label(for="") Surname
@@ -31,13 +31,16 @@ html(lang="en")
               .col
                 label(for="") Place of residence
                 input.form-control(type="text" name="residence" placeholder="Last name")
+                span#errorResidence
             .form-row
               .col
                 label(for="") Occupation
                 input.form-control(type="text" name="occupation" placeholder="First name")
+                span#errorOccupation
               .col
                 label(for="") Nationality
                 input.form-control(type="text" name="nationality" placeholder="Last name")
+                span#errorNationality
             fieldset.form-group
               .row
                 legend.col-form-label.col-sm-2.pt-0 Gender
@@ -50,5 +53,7 @@ html(lang="en")
                     input#gridRadios2.form-check-input(type="radio" name="gender" value="female")
                     label.form-check-label(for="gridRadios2")
                       | Female
+                span#errorCheck
+
             .col-auto
               button.btn.btn-primary(type="submit") Submit

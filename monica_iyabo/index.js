@@ -3,6 +3,24 @@
 const express=require("express");
 const bodyParser= require('body-parser');
 const path=require("path");
+require('dotenv').config();
+
+const mongoose=require("mongoose");
+mongoose.connect(process.env.DATABASE,{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex:true,
+  useFindAndModify:false
+  });
+  mongoose.connection
+  .on('open', () => {
+    console.log('Mongoose connection open');
+  })
+  .on('error', (err) => {
+    console.log(`Connection error: ${err.message}`);
+  });
+  const routes =require("./routes/route");
+
 // initialise express to be used for 
 const app=express();
 // Setting the engine pug to be used to view our html files
@@ -14,10 +32,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 app.use(express.static(path.join(__dirname,"public")));
 
-app.get("/",(res,req)=>{
-    res.render("register");
-    console.log("Hello welcome my assesment project");
-})
+app.use("/",routes);
+
 
 
 // created a server have it listen at port 3000
