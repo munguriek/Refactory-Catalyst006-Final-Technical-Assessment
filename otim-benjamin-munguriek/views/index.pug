@@ -1,0 +1,73 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Virus-Test
+  link(rel='stylesheet' href='/css/bootstrap.css')
+  link(rel='stylesheet' href='/css/main-style.css')
+.container.p-5
+  .card
+    .p-2.text-center
+      img.card-img-top(src='/system-images/form-header-image.png' alt='Registration Form Header')
+      h2 Ministry of Health
+      h1
+        strong Covid-19 (Corona Virus)
+      h2 Virus - Test Registration Form
+    .card-body
+      form.needs-validation(action='' method='post' novalidate='')
+        .row
+          .col-md-6.mb-3.form-group
+            label(for='surname') Surname
+            input#surname.form-control(type='text' name='surname' required='')
+            .invalid-feedback
+              | Surname is required.
+          .col-md-6.mb-3.form-group
+            label(for='givenName') Given name
+            input#givenName.form-control(type='text' name='givenName' required='')
+            .invalid-feedback
+              | Given name is required.
+        .row
+          .col-md-6.mb-3.form-group
+            label(for='dob') Date of Birth
+            input#dob.form-control(type='date' name='dob' required='')
+            .invalid-feedback
+              | Date of Birth is required.
+          .col-md-6.mb-3.form-group
+            label(for='residence') Place of residence
+            input#residence.form-control(type='text' name='residence' required='')
+            .invalid-feedback
+              | Place of Residence is required.
+        .row
+          .col-md-6.mb-3.form-group
+            label(for='occupation') Occupation
+            input#occupation.form-control(type='text' name='occupation' required='')
+            .invalid-feedback
+              | Occupation is required.
+          .col-md-6.mb-3.form-group
+            label(for='nationality') Nationality
+            input#nationality.form-control(type='text' name='nationality' required='')
+            .invalid-feedback
+              | Nationality is required.
+        .row
+          .col-md-12
+            h6 Gender
+            hr
+        .row
+          .col-md-6.mb-3.form-group
+            input#gender(type='radio' name='gender' value='female' required='')
+            |  &nbsp; Female
+          .col-md-6.mb-3.form-group
+            input#gender(type='radio' name='gender' value='male' required='')
+            |  &nbsp; Male
+    .row.mb-3.p-2
+      .col-md-12.form-group
+        label(for='category') Category
+        select.form-control(name='category')
+          option(value='') --Select Category--
+          option(value='returnee') Returnee
+          option(value='contact') Contact
+          option(value='alert') Alert
+          option(value='volunteer') Volunteer
+    input.btn.btn-primary.m-3.p-1.float-right.btn-sm(type='submit' value='Register')
+script(src='/js/bootstrap.js')
+script(src='/js/main-script.js')

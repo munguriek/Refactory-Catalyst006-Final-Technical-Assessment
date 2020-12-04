@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virus-Test</title>
+    <link rel="stylesheet" href="../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../public/css/main-style.css">
+</head>
+<body class="bg-light">
+    <div class="container p-5">
+        <div class="card">
+            <div class="p-2 text-center">
+                <img class="card-img-top" src="../public/system-images/form-header-image.png" alt="Registration Form Header">
+                <h2>Ministry of Health</h2>
+                <h1><strong>Covid-19 (Corona Virus)</strong></h1>
+                <h2>Virus - Test Registration Form</h2>
+            </div>
+            <div class="card-body">
+                <form action="" method="post" class="needs-validation" novalidate>
+                    <div class="row">
+                        <div class="col-md-6 mb-3 form-group">
+                          <label for="surname">Surname</label>
+                          <input type="text" name="surname" class="form-control" id="surname" required>
+                          <div class="invalid-feedback">
+                            Surname is required.
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-3 form-group">
+                          <label for="givenName">Given name</label>
+                          <input type="text" name="givenName" class="form-control" id="givenName" required>
+                          <div class="invalid-feedback">
+                            Given name is required.
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3 form-group">
+                          <label for="dob">Date of Birth</label>
+                          <input type="date" name="dob" class="form-control" id="dob" required>
+                          <div class="invalid-feedback">
+                            Date of Birth is required.
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-3 form-group">
+                          <label for="residence">Place of residence</label>
+                          <input type="text" name="residence" class="form-control" id="residence" required>
+                          <div class="invalid-feedback">
+                            Place of Residence is required.
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3 form-group">
+                          <label for="occupation">Occupation</label>
+                          <input type="text" name="occupation" class="form-control" id="occupation" required>
+                          <div class="invalid-feedback">
+                            Occupation is required.
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-3 form-group">
+                          <label for="nationality">Nationality</label>
+                          <input type="text" name="nationality" class="form-control" id="nationality" required>
+                          <div class="invalid-feedback">
+                            Nationality is required.
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6>Gender</h6>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3 form-group">
+                          <input type="radio" name="gender" id="gender" value="female" required> &nbsp; Female
+                        </div>
+                        <div class="col-md-6 mb-3 form-group">
+                          <input type="radio" name="gender" id="gender" value="male" required> &nbsp; Male
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3 p-2">
+                        <div class="col-md-12 form-group">
+                            <label for="category">Category</label>
+                            <select name="category" class="form-control">
+                                <option value="">--Select Category--</option>
+                                <option value="returnee">Returnee</option>
+                                <option value="contact">Contact</option>
+                                <option value="alert">Alert</option>
+                                <option value="volunteer">Volunteer</option>
+                            </select>
+                        </div>
+                    </div>
+                    <input type="submit" value="Register" class="btn btn-primary m-3 p-1 float-right btn-sm">  
+                </form>                  
+            </div>
+        </div>
+    </div>
+
+    <script src="../public/js/bootstrap.js"></script>    
+    <script src="../public/js/main-script.js"></script> 
+</body>
+</html>
