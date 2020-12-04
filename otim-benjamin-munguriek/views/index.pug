@@ -15,12 +15,13 @@ body
                 h1
                     strong Covid-19 (Corona Virus)
                 h2 Virus - Test Registration Form
+                
             .card-body
                 form#form(action='' method='post')
                     .row
                         .col-md-6.mb-3.form-group
                             label(for='surname') Surname
-                            input#surname.form-control(type='text' name='surname' required)
+                            input#surname.form-control(type='text' name='surname' autofocus required)
                             small
                                 | Error Message
                         .col-md-6.mb-3.form-group
@@ -59,9 +60,9 @@ body
                             input#gender(type='radio' name='gender' value='female' required)
                             |  &nbsp; Female
                         .col-md-6.mb-3.form-group
-                            input#gender(type='radio' name='gender' value='male' required)
+                            input#gender(type='radio' name='gender' value='male' required checked='checked')
                             |  &nbsp; Male
-                    .row.mb-3.p-2
+                    .row.mb-2.p-2
                         .col-md-12.form-group
                             label(for='category') Category
                             select#category.form-control(name='category')
@@ -72,7 +73,10 @@ body
                                 option(value='volunteer') Volunteer
                             small
                                 | Error Message
-                    input.btn.btn-primary.mb-3.p-1.float-right(type='submit' value='Register')
+                    .row
+                        .col-md-6
+                        .col-md-6
+                            input.btn.btn-primary.btn-lg.btn-block.mb-3.p-1.float-right(type='submit' value='Register')
     script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous')
     script(src='/js/bootstrap.js')
     script(src="/javascript/mainscript.js")

@@ -8,11 +8,11 @@ const user = require('./models/Patient');
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set('view engine', 'pug'); //Setting the view engine to pug
 
 
 app.use(bodyParser.urlencoded({extended:false}));
-app.use(express.static('public'));
+app.use(express.static('public')); //Directing express to render static files from public
 app.use('/', routes);
 
 

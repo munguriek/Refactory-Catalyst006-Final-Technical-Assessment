@@ -1,16 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const Patient = require('../models/Patient');
-
 const router = express.Router();
 
-const Patients = mongoose.model('Patient');
 
 router.get('/', (req, res) => {
     res.render("index", {title:"Virus-Test"});
   });
 
-  router.post('/', async (req, res) => {
+router.post('/', async (req, res) => {
     try{
       const patient = new Patient(req.body);
       await patient.save()

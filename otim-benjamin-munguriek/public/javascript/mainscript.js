@@ -8,7 +8,9 @@ const gender = document.getElementById("gender");
 const category = document.getElementById("category");
 const form = document.getElementById("form");
 
-
+/*
+Retrieving the form groups of all elements in the form
+so as to render the error messages */
 
 let surnameGroup = surname.parentElement;
 let givenNamesGroup = givenNames.parentElement;
@@ -19,8 +21,9 @@ let nationalityGroup = nationality.parentElement;
 let genderGroup = gender.parentElement;
 let categoryGroup = category.parentElement;
 
-const alphaNumeric = /^[0-9a-zA-Z]+$/;
+const alphaNumeric = /^[0-9a-zA-Z]+$/; 
 
+// Using the onblur function to get on keyup events on every input field 
 
 surname.onblur = function(){
     if(surname.value.length < 2 || surname.value.length > 17){
@@ -132,5 +135,3 @@ category.onblur = function(){
         category.className += " is-valid"
     }
 }
-
-
