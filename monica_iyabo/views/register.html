@@ -8,27 +8,76 @@
     <title>Ministry of Health</title>
 </head>
 <body>
-    <div>
-        <header> this my header</header>
-    </div>
     <div class="container">
-        This the rest of the body
         <div class="row">
-            <div class="col"></div>
+        <div class="col">
+    <div>
+        <header> 
+            <img src="../public/images/form-header-image.png" alt="">
+        </header>
+    </div>
+    
+            
+            
             <form action="" method="POST">
                 
                     <div class="form-row">
                       <div class="col">
                         <label for="">Surname</label>
-                        <input type="text" class="form-control" placeholder="First name">
+                        <input type="text" class="form-control" name="surname"placeholder="First name">
                       </div>
                       <div class="col">
-                        <label for="">name</label>
-                        <input type="text" class="form-control" placeholder="Last name">
+                        <label for="">Givenname</label>
+                        <input type="text" class="form-control" name="givenname" placeholder="Last name">
                       </div>
                     </div>
-                   
+                    <div class="form-row">
+                        <div class="col">
+                          <label for="">Date of birth</label>
+                          <input type="text" class="form-control" name="dob" placeholder="First name">
+                        </div>
+                        <div class="col">
+                          <label for="">Place of residence</label>
+                          <input type="text" class="form-control" name="residence" placeholder="Last name">
+                        </div>
+                    </div>
+                <div class="form-row">
+                        <div class="col">
+                          <label for="">Occupation</label>
+                          <input type="text" class="form-control" name="occupation" placeholder="First name">
+                        </div>
+                        <div class="col">
+                          <label for="">Nationality</label>
+                          <input type="text" class="form-control" name="nationality" placeholder="Last name">
+                        </div>
+                    
+                </div> 
+                <fieldset class="form-group">
+                    <div class="row">
+                      <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                      <div class="col-sm-10">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="male" checked>
+                          <label class="form-check-label" for="gridRadios1">
+                            Male
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="female">
+                          <label class="form-check-label" for="gridRadios2">
+                            Female
+                          </label>
+                        </div>
+                    
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
             </form>
+            </div>
         </div>
 
     </div>
