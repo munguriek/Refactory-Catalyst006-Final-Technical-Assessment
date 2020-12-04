@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// const validator = require("validator");
 
 const RegForm = Schema({
     surname: { type: String, required: true },
