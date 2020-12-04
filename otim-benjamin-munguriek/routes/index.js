@@ -1,7 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const flash = require('connect-flash');
-
 const Patient = require('../models/Patient');
 
 const router = express.Router();

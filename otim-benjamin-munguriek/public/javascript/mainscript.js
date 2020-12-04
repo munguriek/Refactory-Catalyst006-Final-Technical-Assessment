@@ -104,12 +104,12 @@ nationality.onblur = function(){
         nationalityGroup.className += " error";
         nationality.className += " is-invalid"
         const small = nationalityGroup.querySelector('small');
-        small.innerText = "Must be Between 2 and 16 characters";
+        small.innerText = "Nationality Must be Between 2 and 16 characters";
         nationality.focus();
     } else if (!(nationality.value.match(alphaNumeric))){
         nationalityGroup.className += " error";
         const small = nationalityGroup.querySelector('small');
-        small.innerText = "Has to contain letters and numbers only";
+        small.innerText = "Nationality Has to contain letters and numbers only";
         nationality.focus();
     } else {
         nationalityGroup.classList.remove("error");
