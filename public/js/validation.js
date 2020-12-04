@@ -38,12 +38,12 @@ const validateForm = ()=>{
     // let bday = new Date(dob.value),
     // bday = bday.getFullYear();
     // currentYear = new Date().getFullYear()
-    // if(currentYear - bday <0>150{
+    // if(currentYear - bday <0>150){
     //     dobError.innerHTML = "Should be between 1 to 150 years old";
     //     dobError.style.color = "red";
     //     dob.style.border = "2px solid red";
     // return false;
-    //     });
+    //     }
   
     const resiError = document.getElementById('resiError')
     if(residence.value == ""){
