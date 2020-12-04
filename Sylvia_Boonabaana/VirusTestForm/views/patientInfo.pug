@@ -1,15 +1,16 @@
 head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title Massajja Ufarm
+  title Patient Info
   link(rel='stylesheet' href='./css/bootstrap/bootstrap.css' type='text/css')
   link(rel='stylesheet' href='./css/style.css' type='text/css')
 body
+    img.dashImage(src='img/uganda-flag-part.png' alt='')
     header.card-header
-        h4.card-title Patients Tested For Covid-19
+        h4.card-title List of Patients Tested For Covid-19
     |&nbsp
     table.table
-        thead.card-header 
+        thead.card-header.tableHeader 
             tr
                 th Surname
                 th Given Name

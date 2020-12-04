@@ -10,9 +10,10 @@ const regForm = (event) => {
     const occupation = form.occupation;
     const nationality = form.nationality;
     const patientCategory = form.patientCategory;
-    
+
+   
     //Validate Surname
-    let surnameRegex = /^[A-Za-z]{1,16}$/;
+    let surnameRegex = /^[A-Za-z ]{1,16}$/;
     let surnameErr = document.getElementById("surnameErr");
     if (surnameRegex.test(surname.value) == false) {
       surnameErr.innerHTML = "* This field is required";
@@ -22,7 +23,7 @@ const regForm = (event) => {
     } 
   
     //Validate Given Name.
-    let givenNameRegex = /^[A-Za-z]{1,16}$/;
+    let givenNameRegex = /^[A-Za-z ]{1,16}$/;
     let givenNameErr = document.getElementById("givenNameErr");
     if (givenNameRegex.test(givenName.value) == false) {
       givenNameErr.innerHTML = "* This field is required";
@@ -46,7 +47,7 @@ const regForm = (event) => {
 
 
    //Validate Residence
-   let residenceRegex = /^[A-Za-z]{1,20}$/;
+   let residenceRegex = /^[A-Za-z ]{1,20}$/;
    let residenceErr = document.getElementById("residenceErr");
    if (residenceRegex.test(residence.value) == false) {
      residenceErr.innerHTML = "* This field is required";
@@ -66,7 +67,7 @@ const regForm = (event) => {
   } 
 
 //Validate Nationality
-let nationalityRegex = /^[A-Za-z]{5,20}$/;
+let nationalityRegex = /^[A-Za-z ]{5,20}$/;
 let nationalityErr = document.getElementById("nationalityErr");
 if (nationalityRegex.test(nationality.value) == false) {
   nationalityErr.innerHTML = "* This field is required";
@@ -88,9 +89,23 @@ if (nationalityRegex.test(nationality.value) == false) {
     let regbutton = anchor.getElementsByTagName("input")[0];
     regbutton.disabled = true;
     form.requestSubmit();
+    
+
   };
 
     let anchor = document.getElementById("regForm");
-    anchor.addEventListener("click", regForm);
+    anchor.addEventListener("click", regForm, );
+    
 
+  //   const  successAlert = ()=>{
+  //     let alertBTN = document.getElementById("alertSuccess").setAttribute("class", "aria-hidden");;
+  //     alertBTN.preventDefault();
+  // }
+    // const successAlert = (event)=>{
+  //   event.preventDefault();
+  //   let anchor = document.getElementById("alertSuccess");
+  //   anchor.disabled=true;
+  // }
+  // let alertBTN = document.getElementById("alertSuccess");
+  // alertBTN.addEventListener("submit", successAlert);
 

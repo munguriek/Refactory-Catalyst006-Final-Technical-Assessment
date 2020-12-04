@@ -22,3 +22,18 @@
   color: white;
   text-align: center;
 }
+
+.dashImage{
+  width: 1600px;
+  height: 100px;
+}
+
+.tableHeader {
+  background-color: black;
+  color: white;
+}
+
+/* .alertSuccess{
+  visibility: hidden;
+  display: none;
+ } */
