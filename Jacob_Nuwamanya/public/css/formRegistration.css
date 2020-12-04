@@ -130,6 +130,10 @@ button {
 button:focus {
   outline: 0.5px solid rgb(35, 199, 188);
 }
+button:hover {
+  transform: scale(0.9);
+  box-shadow: 1px 1px 5px rgb(100, 100, 100);
+}
 @media (max-width: 600px) {
   button {
     float: none;
