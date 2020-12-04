@@ -50,7 +50,7 @@ html(lang="en")
               fieldset.form-group
                 .row
                   legend.col-form-label.col-sm-2.pt-0 Gender
-                  .col-sm-10
+                  .col
                     .form-check
                       input#gridRadios1.form-check-input(type="radio" name="gender" value="male" checked="")
                       label.form-check-label(for="gridRadios1")
@@ -59,7 +59,15 @@ html(lang="en")
                       input#gridRadios2.form-check-input(type="radio" name="gender" value="female")
                       label.form-check-label(for="gridRadios2")
                         | Female
-                  span#errorCheck
+                    span#errorCheck
+                  .col
+                    label Category:
+                    select.name(name="category")
+                            option( value="Returnee") Returnee
+                            option( value="Contact") Contact 
+                            option( value="Alert") Alert
+                            option( value="Volunteer") Volunteer
+                    span#errorCat
 
               .col-auto
                 button.btn.btn-primary(type="submit") Submit

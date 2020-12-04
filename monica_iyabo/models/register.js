@@ -13,6 +13,7 @@ const registerSchema=new mongoose.Schema({
     residence:{type:String},
     nationality:{type:String},
     gender:{type:String},
+    category:{type:String},
 
 })
     module.exports=mongoose.model("register",registerSchema);

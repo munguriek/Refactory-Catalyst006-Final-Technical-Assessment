@@ -55,7 +55,25 @@ const registerValid=()=> {
         errorNationality.innerHTML = "Select a date!";
         errorNationality.style.color="red";
         return false;
+    }
+    const gender=document.register.gender
+    const errorCheck=document.getElementById("errorCheck")
+    if(gender!=checked){
+        gender.style.border="1px solid red";
+        errorCheck.innerHTML = "Select a date!";
+        errorCheck.style.color="red";
+        return false;
+    }
+
     
+
+    const category=document.register.category
+    const errorCat=document.getElementById("errorCat")
+    if(category.value==""){
+        category.style.border="1px solid red";
+        errorCat.innerHTML = "This field is required!";
+        errorCat.style.color="red";
+        return false;
     }
     
     else{
