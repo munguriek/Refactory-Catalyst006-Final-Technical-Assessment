@@ -93,3 +93,4 @@ else{
     alert('Registration was successful!')
     return true;
 }
+}
