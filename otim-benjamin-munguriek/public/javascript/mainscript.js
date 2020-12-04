@@ -6,6 +6,9 @@ const occuptation = document.getElementById("occupation");
 const nationality = document.getElementById("nationality");
 const gender = document.getElementById("gender");
 const category = document.getElementById("category");
+const form = document.getElementById("form");
+
+
 
 let surnameGroup = surname.parentElement;
 let givenNamesGroup = givenNames.parentElement;
@@ -114,4 +117,20 @@ nationality.onblur = function(){
         nationality.className += " is-valid"
     }
 }
+
+
+category.onblur = function(){
+    if(category.value == ""){
+        categoryGroup.className += " error";
+        category.className += " is-invalid"
+        const small = categoryGroup.querySelector('small');
+        small.innerText = "Select Patient Category";
+        category.focus();
+    }  else {
+        categoryGroup.classList.remove("error");
+        category.classList.remove("is-invalid");
+        category.className += " is-valid"
+    }
+}
+
 
