@@ -6,7 +6,6 @@ const virusRegisterModel = require("../models/virusRegisterModel");
 
 
 
-
 //route for urban farmer registration form forms
 router.get("/", (req, res) => {
   res.render("patientRegister", { title: "COVI-19 Test Registration form" });
@@ -22,7 +21,7 @@ router.post("/", async (req, res) => {
       if (err) {
         throw err;
       }
-      res.redirect("/patientRegistration");
+      res.redirect("/registerAlert");
     });
   } catch (error) {
     res.status(400).send("Hello try again.");
@@ -31,117 +30,23 @@ router.post("/", async (req, res) => {
 });
 
 
-
 // retrieve data from the database 
-router.get('/registredprofiles', async (req, res) => {
+router.get('/', async (req, res) => {
   if (req.session.user) {
       try {
           let user = await COVID_9_testRegister.find()
           if (req.query.gender) {
               user = await COVID_9_testRegister.find({ gender: req.query.gender })
           }
-          res.render('foDash', { title: ' COVID-TEST  Register', users: user, currentUser:req.session.user})
+          res.render('Alert', { title: ' New COVID-TEST  Register', users: user, currentUser:req.session.user})
       } catch (err) {
-          res.status(400).send("Unable to find items in the database");
+          res.status(400).send("Unable to find profile in the database");
       }
   }else {
-      console.log("Can't find session")
-      res.redirect('/signin')
+      console.log("Can't find Registration form")
+      res.redirect('/registerAlert')
   }
 })
-///// delete 
-router.post('/delete', async (req, res) => {
-  if (req.session.user) {
-      try {
-          await ufRegister.deleteOne({ _id: req.body.id })
-          res.redirect('back')
-      } catch (err) {
-          res.status(400).send("Unable to delete item in the database");
-      }
-  }else {
-          console.log("Can't find session")
-          res.redirect('/signin')
-      }
-})
-
-//update data fields
-router.get('/ufupdate/:id', async (req, res) => {
-  if (req.session.user) {
-      try {
-          const updateUser = await ufRegister.findOne({ _id:req.params.id })
-          res.render('ufprofileUpdate', { user: updateUser })
-      } catch (err) {
-          res.status(400).send("Unable to find item in the database");
-      }
-  }else {
-      console.log("Can't find session")
-      res.redirect('/signin')
-  }
-})
-
-router.post('/ufupdate', async (req, res) => {
-if (req.session.user) {
-  try {
-      await ufRegister.findOneAndUpdate({_id:req.query.id}, req.body)
-      res.redirect('ufProfiles');
-  } catch (err) {
-      res.status(404).send("Unable to update selected Urban Farmer detial in the database");
-  } 
-}else {
-  console.log("Can't find Urban Farmer profile details")
-  res.redirect('/signin')
-}   
-})
-
-//verifying product
-
-router.get('/verify/:id', async (req, res) => {
-  if (req.session.user) {
-      try {
-          const updateItem = await productRegister.findOne({ _id:req.params.id })
-          res.render('verify', {item: updateItem })
-      } catch (err) {
-          res.status(400).send("Unable to find item in the database");
-      }
-  }else {
-      console.log("Can't find session")
-      res.redirect('/signin')
-  }
-})
-
-router.post('/verify', async (req, res) => {
-if (req.session.user) {
-  try {
-      await productRegister.findOneAndUpdate({_id:req.query.id}, req.body)
-      res.redirect('ufProfiles');
-  } catch (err) {
-      res.status(404).send("Unable to verify product database");
-  } 
-}else {
-  console.log("Can't find product verification ")
-  res.redirect('/signin')
-}   
-})
-
-
-//Verified Product list
-
-router.get('/verifiedProductList', async (req, res) => {
-  try {
-    let item = await productRegister.find();
-    if(req.query.type) {
-      item = await productRegister.find(
-        {
-        type:req.query.type
-      });
-    }
-      res.render('verifiedPdtList', {title: 'Product list', items:item, 
-      currentUser:req.session.user});     
-    } catch (err) {
-      res.status(404).send("unable to find verified product");
-    }
-})
-
 
 
 

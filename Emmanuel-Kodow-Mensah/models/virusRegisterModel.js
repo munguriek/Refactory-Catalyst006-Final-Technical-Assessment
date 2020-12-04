@@ -19,15 +19,8 @@ const COVID_19_testRegisterSchema = new mongoose.Schema({
   },
   occup: String,
   gender: String,
-  phoneNum: String,
-  ward: String,
-  uniqID: String,
-  niN: {
-    type: String,
-  },
-  ufActivity: [{
-    type: String
-  }],
+  nation: String,
+  cat: String,
 
 });
 
