@@ -1,0 +1,43 @@
+*{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.error {
+    color: red;
+}
+
+/* .container{
+    border: 1px solid black;
+    margin-left: 25%;
+    margin-right:25%;
+    width: 0.1%;
+    height: 2%;
+} */
+
+.container {
+    /* width: 50vw; */
+    width: auto;
+    background: none;
+    border: 0.3px groove #c9c5c5;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 3rem;
+    border: 1px solid black;
+}
+
+.container img {
+    width: 100%;
+}
+
+.container .btn {
+    float: right;
+    padding: .5rem;
+    width: 20rem;
+}
+
+select {
+    text-align-last:center; 
+}
