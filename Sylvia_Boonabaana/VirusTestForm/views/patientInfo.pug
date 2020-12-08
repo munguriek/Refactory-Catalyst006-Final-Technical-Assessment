@@ -1,0 +1,43 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Patient Info
+  link(rel='stylesheet' href='./css/bootstrap/bootstrap.css' type='text/css')
+  link(rel='stylesheet' href='./css/style.css' type='text/css')
+body
+    img.dashImage(src='img/uganda-flag-part.png' alt='')
+    header.card-header
+        h4.card-title List of Patients Tested For Covid-19
+    |&nbsp
+    table.table
+        thead.card-header.tableHeader 
+            tr
+                th Surname
+                th Given Name
+                th Date of Birth
+                th Residence
+                th Occupation
+                th Nationality
+                th Gender
+                th Patient Category
+                th
+                th
+
+        tbody
+            if users.length
+            each user in users
+                tr
+                    td #{user.surname}
+                    td #{user.givenName}
+                    td #{user.dob}
+                    td #{user.residence}
+                    td #{user.occupation}
+                    td #{user.nationality}
+                    td #{user.gender}
+                    td #{user.patientCategory}
+                    td
+            else
+                p No patients found with this category :(
+script(src='./js/jquery-3.5.1.slim.min.js')
+script(src='./js/popper.min.js')
+script(src='./js/bootstrap/bootstrap.js')

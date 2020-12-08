@@ -1,0 +1,77 @@
+extends layout
+block content
+  div
+    h4.headerText Ministry of Health
+    h1.headerText.virus COVID-19 (CORONA VIRUS)
+    h4.headerText Virus - Test Registration Form
+  div
+    span#successMsg.message
+  section
+    //- REGISTRATION FORM 
+    .container
+      .row
+        .col-md-12.order-md-1
+          form(name="regForm", action="/regestrationForm", method="POST", onsubmit="return regFormVal()")
+            .row
+              .col-md-6.mb-3
+                label(for="surName") Surname
+                input.form-control(type="text", name="surName")
+                span#surnameErr.covers
+                  
+                  
+              .col-md-6.mb-3
+                label(for="givenName") Given name
+                input.form-control(type="text", name="givenName")
+                span#givenNameErr.covers
+                  
+                  
+            .row
+              .col-md-6.mb-3
+                label(for="dob") Date of Birth
+                input.form-control(type="date", name="dob")
+                span#dobErr.covers
+                  
+                  
+              .col-md-6.mb-3
+                label(for="residence") Place of residence
+                input.form-control(type="text", name="residence")
+                span#residenceErr.covers
+                  
+                  
+            .row
+              .col-md-6.mb-3
+                label(for="occupation") Occupation
+                input.form-control(type="text", name="occupation")
+                span#occupationErr.covers
+                  
+                  
+              .col-md-6.mb-3
+                label(for="nationality") Nationality
+                input.form-control(type="text", name="nationality")
+                span#nationalityErr.covers
+                  
+                  
+            h6.mb-3 Gender
+            hr
+            .row
+              .col-md-6.mb-3
+                .custom-control.custom-radio
+                  input#male.custom-control-input(name="gender", type="radio", value = "male" checked, required)
+                  label.custom-control-label(for="male  ") Male
+              .col-md-6.mb-3
+                .custom-control.custom-radio
+                  input#female.custom-control-input(name="gender", type="radio", value = "female" required)
+                  label.custom-control-label(for="female") Female
+            .row
+              .col-md-12.mb-3
+                label(for="category") Category
+                span#categoryErr.covers
+                select(name = "category").custom-select.d-block.w-100#category
+                  option(value = "0") --Select Category--
+                  option(value = "Returnee") Returnee
+                  option(value = "Contact") Contact
+                  option(value = "Alert") Alert
+                  option(value = "Volunteer") Volunteer
+            .row
+              .col-3.btnAlign
+                button.btn.btn-primary.btn-lg.btn-block(type="submit") Register

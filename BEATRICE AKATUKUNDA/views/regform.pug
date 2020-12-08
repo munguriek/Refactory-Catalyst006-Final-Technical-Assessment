@@ -1,0 +1,81 @@
+doctype html
+
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Registration form
+  link#bootstrap-css(href='//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css' rel='stylesheet')
+  script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js')
+  script(src='//code.jquery.com/jquery-1.11.1.min.js')
+  link(rel='stylesheet' href='regform.css')
+  script(src='regform.js')
+.container
+  .row.centered-form
+    .col-xs-12.col-sm-8.col-md-4.col-sm-offset-2.col-md-offset-4
+      .panel.panel-default
+        // <div class=image img src= "../public/form-header-image.png"></div>
+        img(src='../public/form-header-image.png' alt='Simply Easy Learning' width='357' height='80')
+        #heading
+          p Ministry of Health
+          p
+            b COVID-19 (CORONA VIRUS)
+          p Virus-Test Registration Form
+        //
+          <div class="panel-heading">
+          <h3 class="panel-title">Please sign up for Bootsnipp <small>It's free!</small></h3>
+          </div>
+        .panel-body
+          
+          form(name='registration' action='/' method='POST')
+            .row
+              .col-xs-6.col-sm-6.col-md-6
+                .form-group
+                  label Surname
+                  input#surname.form-control.input-sm(type='text' name='surname' placeholder='')
+              .col-xs-6.col-sm-6.col-md-6
+                .form-group
+                  label Given name
+                  input#given_name.form-control.input-sm(type='text' name='given_name' placeholder='')
+            .row
+              .col-xs-6.col-sm-6.col-md-6
+                .form-group
+                  label Date of Birth
+                  input#dob.form-control.input-sm(type='text' name='dob' placeholder='')
+              .col-xs-6.col-sm-6.col-md-6
+                .form-group
+                  label Place of Residence
+                  input#residence.form-control.input-sm(type='text' name='residence' placeholder='')
+            .row
+              .col-xs-6.col-sm-6.col-md-6
+                .form-group
+                  label Occupation
+                  input#occupation.form-control.input-sm(type='text' name='occupation' placeholder='')
+              .col-xs-6.col-sm-6.col-md-6
+                .form-group
+                  label Nationality
+                  input#nationality.form-control.input-sm(type='text' name='nationality' placeholder='')
+            .form-group
+              label Gender
+              hr
+              label.radio-inline
+                input#sexM(type='radio' name='gender' checked='')
+                | Male
+              label.radio-inline
+                input#sexF(type='radio' name='gender')
+                | Female
+            .form-group
+              label Category
+              .dropdown
+                button#select.btn.btn-default.dropdown-toggle(type='button' data-toggle='dropdown' name='select')
+                  | ---Select Category---
+                  span.caret
+                ul.dropdown-menu.dropdown-menu-center
+                  li
+                    a(href='#') Returnee
+                  li
+                    a(href='#') Contact
+                  li
+                    a(href='#') Alert
+                  li
+                    a(href='#') Volunteer
+            input.btn.btn-info.btn-block(type='submit' value='Register' onclick='validateRegForm()')

@@ -1,0 +1,63 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Virus-Test Form 
+  link(rel='stylesheet' href='./css/bootstrap/bootstrap.css' type='text/css')
+  link(rel='stylesheet' href='./css/style.css' type='text/css')
+.container
+  form.patientRegForm(name='regForm' action='/patientRegForm' method='POST')
+    img.formImage(src='img/form-header.png' alt='')
+    p.moh Ministry of Health
+    h4.moh COVID-19 (CORONA VIRUS)
+    p.moh Virus-Test Registration Form
+    .form-row
+      .col-md.alertSuccess
+        .alert.alert-success.alert-warning.alert-dismissible.fade.show(role='alert')
+          strong HOOOOORRAAAAAAYYY! 
+          |  Registration was successful.
+          button.close(type='button' data-dismiss='alert' aria-label='Close')
+            span(aria-hidden='true') &times;
+    .form-row
+      .form-group.col-md-6
+        input.form-control(type='text' placeholder='Surname' name='surname')
+        span#surnameErr
+      .form-group.col-md-6
+        input.form-control(type='text' placeholder='Given Name' name='givenName')
+        span#givenNameErr
+    .form-row
+      .form-group.col-md-6
+        input.form-control(type='text' placeholder='Date of Birth' name='dob' onfocus="(this.type='date')")
+        span#dobErr
+      .form-group.col-md-6
+        input.form-control(type='text' placeholder='Place of Residence' name='residence')
+        span#residenceErr
+    .form-row
+      .form-group.col-md-6
+        input.form-control(type='text' placeholder='Occupation' name='occupation')
+        span#occupationErr
+      .form-group.col-md-6
+        input.form-control(type='text' placeholder='Nationality' name='nationality')
+        span#nationalityErr
+    .form-group.form-row
+      .form-check-inline
+        label &nbsp Gender: &nbsp&nbsp&nbsp&nbsp&nbsp
+        input#genderM.form-check-input(type='radio' name='gender' value='Male' checked='')
+        label.form-check-label(for='genderM') Male &nbsp&nbsp&nbsp&nbsp&nbsp
+      .form-check-inline
+        input#genderF.form-check-input(type='radio' name='gender' value='Female')
+        label.form-check-label(for='genderF')  Female 
+    .form-row
+      .form-group.col-md
+        select.form-control(name='patientCategory')
+          option(value='Default' selected='') Select Category
+          option(value='Returnee') Returnee
+          option(value='Contact') Contact
+          option(value='Alert') Alert
+          option(value='Volunteer') Volunteer
+        span#patientCategoryErr
+    a#regForm(href='#')
+      input.regButton.btn.btn-primary(type='button' value='Register')
+script(src='./js/jquery-3.5.1.slim.min.js')
+script(src='./js/popper.min.js')
+script(src='./js/bootstrap/bootstrap.js')
+script(src='./js/validateForm.js')

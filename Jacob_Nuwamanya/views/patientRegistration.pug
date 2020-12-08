@@ -1,0 +1,61 @@
+doctype
+html
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width,initial-scale=1.0')
+        title COVID PATIENTS FORM
+        link(rel='stylesheet' type='text/css' href='/css/formRegistration.css')
+    body
+        .form-container
+            .images-container
+                img.images(src="/images/form-header-image.png" alt="form header images")
+            .header
+                div.font25 Ministry of Health                    
+                h2 COVID-19 (CORONA VIRUS)
+                div.font25.form-name Virus -Test Registration Form
+            if(success)
+                .success
+                    span.text Registration was successful !
+                    span.close X
+            form(action="/" name="covidform" method="POST")
+                .row-group
+                    .left-container
+                        label(for="") Surname
+                        input(type="text" name="surname" id="surname")
+                    .right-container
+                        label(for="given") Given name
+                        input(type="text", name="given" id="given")
+                .row-group
+                    .left-container
+                        label(for="dob") Date of Birth
+                        input(type="date" name="dob" id="dob" )
+                    .right-container
+                        label(for="place") Place of residence
+                        input(type="text", name="place" id="place")
+                .row-group
+                    .left-container
+                        label(for="occupation") Occupation
+                        input(type="text" name="occupation" id="occupation")
+                    .right-container
+                        label(for="nationality") Nationality
+                        input(type="text", name="nationality" id="nationality")
+                div.gender-container Gender
+                    hr
+                    .row-group
+                        .left-container
+                            input(type="radio" name="gender" id="male" value="male" checked)
+                            label(for="male").marginL10 Male
+                        .right-container
+                            input(type="radio", name="gender" id="female" value="female") 
+                            label(for="female").marginL10 Female
+                .row-group.category
+                    label(for="category") Category
+                    select(name="category" id="category")
+                        option(value="default") -- Select Category --
+                        option(value="Returnee") Returnee
+                        option(value="Contact") Contact
+                        option(value="Alert") Alert
+                        option(value="Volunteer") Volunteer 
+                button.submit(type="button") Register
+        script(type='text/javascript' src='/js/validate_helpers.js')
+        script(type='text/javascript' src='/js/validate.js')
