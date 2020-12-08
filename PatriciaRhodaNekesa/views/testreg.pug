@@ -1,0 +1,75 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(rel="stylesheet", href="/css/testreg.css")
+link(rel="icon", href="images/favicon.jpg", sizes="16x16", type="image/png")
+script(src="https://kit.fontawesome.com/8af5379226.js", crossorigin="anonymous")
+link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,400;1,500&display=swap", rel="stylesheet")
+title Official signup
+.container
+  .header
+    img(src='/images/form-header-image.png')
+    h3 Ministry of Health
+    h1 COVID-19(CORONA VIRUS)
+    h3(style='margin-left: 220px') Virus -Test Registration Form
+  form#form.form(method="POST" action='/register' onsubmit=" return checkInput()" autocomplete="off")
+    .form-control
+      label(for="surname") Surname 
+      input#surname(name="surname", type="text", placeholder="Nekesa")
+      i.fas.fa-check-circle
+      i.fas.fa-exclamation-circle
+      small Error Message
+    .form-control
+      label(for="givenname") Givenname 
+      input#givenname(name="givenname", type="text", placeholder="Patricia")
+      i.fas.fa-check-circle
+      i.fas.fa-exclamation-circle
+      small Error Message
+    .form-control
+      label(for="dob") Date Of Birth
+      input#dob(name="dob", type="date")
+      i.fas.fa-check-circle
+      i.fas.fa-exclamation-circle
+      small Error Message
+    .form-control
+      label(for="residence") Place of Residence
+      input#residence(name="residence", type="text", placeholder="kireka")
+      i.fas.fa-check-circle
+      i.fas.fa-exclamation-circle
+      small Error Message
+    .form-control
+      label(for="occupation") Occupation
+      input#occupation(name="occupation", type="text" placeholder = "healthworker")
+      i.fas.fa-check-circle
+      i.fas.fa-exclamation-circle
+      small Error Message
+    .form-control
+        label(for="nationality") Nationality
+        input#nationality(name="nationality", type="text" placeholder = "Ugandan")
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        small Error Message
+    .form-control
+      label(for="category") Category 
+      select.form-control#category(name="category" value ="Urban Farmer" ) 
+        option(value="Select category") Select category
+        option(value="Returnee") Returnee
+        option(value="Contact") Contact
+        option(value="Alert") Alert
+        option(value="Volunteer") Volunteer
+      i.fas.fa-check-circle
+      i.fas.fa-exclamation-circle
+      small Error Message
+    fieldset(style='margin-bottom:10px;')
+      legend Gender
+      .form-check(style='padding: 3px;')
+        input.form-check-input#gender2(type="radio", name="gender", value="Male" checked)
+        label.form-check-label(for="gender2" style='padding: 3px;')
+        |Male 
+      .form-check(style='padding:3px;')
+        input.form-check-input#gender1(type="radio", name="gender", value="Female")
+        label.form-check-label(for="gender1" style='padding: 3px;')
+        |Female   
+      
+    button Register
+
+script(src="/js/validateTest.js")
