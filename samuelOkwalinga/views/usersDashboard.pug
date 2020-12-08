@@ -1,0 +1,54 @@
+extends layout
+block content
+  div
+    h4.headerText Ministry of Health
+    h3.headerText.virus COVID-19 (CORONA VIRUS)
+    h4.headerText PATIENT LIST
+
+  //- Navigation bar on the dashboard. 
+  nav.navbar.navbar-expand-md
+    a.navbar-brand(href="/index")
+      button.navbar-toggler(type="submit") Add User
+  //- Dashboard header.
+  section#main
+    .container
+      .row
+        .col-md-12
+          .panel-body.form-row
+            //- Dashboard form.
+            form.search(action='/userDashboard' method = "post")
+            div(style="overflow-x:auto;")
+                    table.table.table-bordered.tall
+                      thread.thread-primary
+                        tr.bg-primary
+                          th Surname
+                          th Given Name
+                          th Date of Birth
+                          th Place of Residence
+                          th Occupation
+                          th Nationality
+                          th Gender
+                          th Category
+                          th 
+                          th
+                      tbody
+                        if users.length
+                        each user in users
+                          tr
+                            td #{user.surName}
+                            td #{user.givenName}
+                            td #{user.dob}
+                            td #{user.residence}
+                            td #{user.occupation}
+                            td #{user.nationality}
+                            td #{user.gender}
+                            td #{user.category}
+                            td
+                              a(href='/updateUserInfo/'+user._id)
+                                button.btn.btn-primary.btn-block(type="submit") Update
+                            td
+                              form(method="post" action='/userDashboard')
+                                input(type="hidden", placeholder="", name="id", value=user._id)
+                                button.btn.btn-primary.btn-block(type="submit") Delete
+                        else
+                          p Add users first. None are here yet!
