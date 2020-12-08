@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registration form</title>
+        
+        <link
+            href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"
+            rel="stylesheet"
+            id="bootstrap-css"
+        />
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="regform.css" />
+        <script src="regform.js"></script>
+       
+    </head>
+    <body>
+        <div class="container">
+            <div class="row centered-form">
+                <div
+                    class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4"
+                >
+                    <div class="panel panel-default">
+                        <!-- <div class=image img src= "../public/form-header-image.png"></div> -->
+                        <img src="../public/form-header-image.png" alt="Simply Easy Learning" width="357"
+                        height="80">
+                        <div id="heading" text-align="centre">
+                            <p>Ministry of Health</p>
+                            <p> <b>COVID-19 (CORONA VIRUS)</b></p>
+                            <p>Virus-Test Registration Form</p>
+                        </div>
+                        <!-- <div class="panel-heading">
+			    		<h3 class="panel-title">Please sign up for Bootsnipp <small>It's free!</small></h3>
+			 			</div> -->
+                        <div class="panel-body">
+                            <form role="form" name="registration">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <label>Surname</label>
+                                            <input
+                                                type="text"
+                                                name="surname"
+                                                id="surname"
+                                                class="form-control input-sm"
+                                                placeholder=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <label>Given name</label>
+                                            <input
+                                                type="text"
+                                                name="given_name"
+                                                id="given_name"
+                                                class="form-control input-sm"
+                                                placeholder=""
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <label>Date of Birth</label>
+                                            <input
+                                                type="text"
+                                                name="dob"
+                                                id="dob"
+                                                class="form-control input-sm"
+                                                placeholder=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <label>Place of Residence</label>
+                                            <input
+                                                type="text"
+                                                name="residence"
+                                                id="residence"
+                                                class="form-control input-sm"
+                                                placeholder=""
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <label>Occupation</label>
+                                            <input
+                                                type="text"
+                                                name="occupation"
+                                                id="occupation"
+                                                class="form-control input-sm"
+                                                placeholder=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <label>Nationality</label>
+                                            <input
+                                                type="text"
+                                                name="nationality"
+                                                id="nationality"
+                                                class="form-control input-sm"
+                                                placeholder=""
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <hr />
+                                    <label class="radio-inline">
+                                        <input
+                                            type="radio"
+                                            name="gender"
+                                            id="sexM"
+                                            checked
+                                        />Male
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input
+                                            type="radio"
+                                            name="gender"
+                                            id="sexF"
+                                        />Female
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>Category</label>
+                                    <div class="dropdown">
+                                        <button
+                                            class="btn btn-default dropdown-toggle"
+                                            type="button"
+                                            data-toggle="dropdown"
+                                            name="select"
+                                            id="select"
+                                        >
+                                            ---Select Category---
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul
+                                            class="dropdown-menu dropdown-menu-center"
+                                        >
+                                            <li><a href="#">Returnee</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                            <li><a href="#">Alert</a></li>
+                                            <li><a href="#">Volunteer</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <input
+                                    type="submit"
+                                    value="Register"
+                                    class="btn btn-info btn-block"
+                                    onclick="validateRegForm()"
+                                />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
