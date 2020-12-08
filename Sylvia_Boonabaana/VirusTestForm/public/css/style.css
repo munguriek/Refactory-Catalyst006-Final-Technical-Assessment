@@ -1,0 +1,39 @@
+.patientRegForm{
+  border: 2px solid rgb(223, 220, 220);
+}
+.formImage{
+  width: 100%;
+  margin-top: 10px;
+}
+.moh{
+  text-align: center;
+  margin-top: 20px;
+}
+.form-row{
+  padding: 10px 40px;
+}
+.regButton{
+  margin-left: 870px;
+  width: 200px;
+  margin-bottom: 20px;
+}
+.alert{
+  background-color: green;
+  color: white;
+  text-align: center;
+}
+
+.dashImage{
+  width: 1600px;
+  height: 100px;
+}
+
+.tableHeader {
+  background-color: black;
+  color: white;
+}
+
+/* .alertSuccess{
+  visibility: hidden;
+  display: none;
+ } */
