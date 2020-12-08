@@ -1,0 +1,9 @@
+form{
+    padding-left: 200px;
+}
+#givename,#place,#dob,#surname,#occupation,#nationality{
+    width: auto;
+}
+.categoryy{
+    width: 700px;
+}
