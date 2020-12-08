@@ -1,0 +1,59 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+  //- script(src='/js/reg.js')
+  script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
+  title Virus Test Reg Form
+head
+  title
+.container
+  img(src='./images/reg.png' alt=''  width='500px' )
+  h1 Virus Test Registration Form
+  form(method='POST'  action='/reg'  onsubmit='return validate(e)')
+    .form-row
+      .col
+        label(for='example') Surname
+        input#sur.form-control(type='text' name='surname')
+        #surErr.error
+      .col
+        label(for='example') Given name
+        input#given.form-control(type='text' name='givenname' required='field is required')
+        #givenErr.error
+    .form-row
+      .col
+        label(for='example')  Date  of Birth
+        input.form-control(type='date' name='dateofbirth' required='field is required')
+        #dateErr.error
+      .col
+        label(for='example') Place of Residence
+        input.form-control(type='text' name='placeofresidence' required='field is required')
+        #placeErr.error
+    .form-row
+      .col
+        label(for='example') Occupation
+        input.form-control(type='text' name='occupation' required='field is required')
+        #qualityErr.error
+      .col
+        label(for='example') Nationality
+        input.form-control(type='text' name='nationality' required='field is required')
+        #payErr.error
+    .form-row
+      .col
+        label(for='example') Gender
+        select#pd.form-control(name='gender' required='field is required')
+          option(value='') Choose your gender
+          option(value='Male') Male
+          option(value='Female') Female
+        #producttErr.error
+    .form-group
+        label(for='example') Category
+        select#pd.form-control(name='category' required='Select patient category ')
+          option(value='Default') Select category
+          option(value='N/A') N/A
+          option(value='A') A
+        #productvErr.error
+    button.btn.btn-primary(type='submit') Register
