@@ -1,0 +1,28 @@
+{
+  "name": "marieh-musimenta",
+  "version": "1.0.0",
+  "description": "my final  tech assessment ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "marieblessed"
+  },
+  "author": "musimenta marieh",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.3",
+    "pug": "^3.0.0"
+  }
+}
