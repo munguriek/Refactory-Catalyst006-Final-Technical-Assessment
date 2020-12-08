@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap/css/bootstrap.min.css">
+    <title>ASSESSMENT</title>
+  </head>
+ 
+  <body>
+      <div class="container">
+        <img src="/img/form-header-image.png" alt="For God And My country">
+        <div class="text-center">
+            <p>Ministry of Health</p>
+            <h1>Covid-19(CORONA VIRUS )</h1>
+            <P>virus-Test Registration Form</P>
+            //- <div class="alert alert-primary" role="alert"> Registration was successfull </div>
+        </div>
+        <form class="needs-validation" name="mydata" method="POST" action="/">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="surname">Surname</label>
+                    <input type="text" class="form-control" id="surname" name="surname">
+                    <div class="error" id="surname_err"></div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="givenname">Given name</label>
+                    <input type="text" class="form-control" id="givenname" name="givenname">
+                    <div class="error" id="givenname_err"></div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="bd">Date of Birth</label>
+                    <input type="date" class="form-control" id="bd" name="bd">
+                    <div class="error" id="bd_err"></div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="place">Place of residence</label>
+                    <input type="text" class="form-control" id="place" name="place">
+                    <div class="error" id="place_err"></div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="occupation">Occupation</label>
+                    <input type="text" class="form-control" id="occupation" name="occupation">
+                    <div class="error" id="occupation_err"></div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="nationality">Nationality</label>
+                    <input type="text" class="form-control" id="nationality" name="nationality">
+                    <div class="error" id="nationality_err"></div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col form-group">
+                    <label class="form-check form-check-inline" for="gender">Gender</label><br><hr>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="form-check-input" type="radio" name='gender' value="Male" checked>
+                    <span class="form-check-label"> Male</span>
+
+                    <div class="float-right">
+                      <label class="form-check form-check-inline" for="gender"></label>
+                      <input class="form-check-input" type="radio" name='gender' value="Female">
+                      <span class="form-check-label"> Female</span>
+                      <div class="error" id="gender_err"></div>
+                    <div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select class="custom-select" id="category" name="category">
+                    <option selected value="-- Select Category --">-- Select Category --</option>
+                    <option value="Returnee">Returnee</option>
+                    <option value="Contact">Contact</option>
+                    <option value="Alert">Alert </option>
+                    <option value="Volunteer"> Volunteer </option>
+                </select>
+                <div class="error" id="category_err"></div>
+            </div>
+
+            <button class="btn btn-primary" type="submit" onclick="register()">Register</button>
+        </form>
+      </div>
+
+        
+        <script src="/validate.js"></script>
+        //- <script src="/success.js"></script>
+
+        <!-- Bootstrap being added to js -->
+        <script src="js/bootstrap/js/jquery-3.5.1.slim.min.js"></script>
+        <script src="js/bootstrap/js/popper.min.js"></script>
+        <script src="js/bootstrap/js/bootstrap.js"></script>
+  </body>
+</html>
